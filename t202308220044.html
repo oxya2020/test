@@ -1,0 +1,677 @@
+<!--第I層-->
+<!Doctype html>
+<html lang="zh-Hant-TW">
+<!--第II層-->
+<head>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>calc</title>
+
+<style type="text/css">
+
+body {
+	height:auto;
+	background:#fff;
+	margin:3px;
+} 
+
+#containerI {
+	width:376px;text-align:center;padding:3px;border:1px solid #494949;
+	background:#fff;
+}
+
+#containerII {
+	width:376px;height:24px;text-align:center;padding:3px;border:1px solid #494949;
+	background:#494949;color:#ffcc33;margin:0px;
+}  
+
+table, th, td {  
+	border:none;
+}
+
+
+/*---STAY--- border-collapse:collapse -------------*/  
+th, td {  
+	height:26px;padding:0px 1px;        
+}
+
+
+/*--- Color Group A -------------------------------*/
+.cols10, .cols30, .cols50 {
+	width:40px;background:#fff;
+	border:1px solid #fff;text-align:right;
+	font-size:10px;
+}
+.cols20, .cols40, .cols60 {
+	width:54px;background:#fff;
+	border:1px solid #fff;text-align:right;
+	font-size:16px;color:#000;
+}
+
+
+/*--- Color Group B -------------------------------*/
+.cols11, .cols31, .cols51 {
+	width:40px;background:#fff;
+	border:1px solid #fff;
+	font-size:10px;color:#000;
+}
+.cols21, .cols41, .cols61 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #a6a6a6;
+	font-size:16px;color:#000;font-weight:bold;
+}
+
+  
+/*--- Color Group C -------------------------------*/
+.cols12 {
+	width:40px;background:#ff0033;text-align:right; 
+	border:1px solid #ff0033;
+	font-size:12px;color:#fff; 
+} 
+.cols13 {
+	width:40px;background:#ffcc33;text-align:right;
+	border:1px solid #ffcc33;
+	font-size:12px;color:#fff;
+}
+.cols14 {
+	width:40px;background:#009933;text-align:right;
+	border:1px solid #009933;
+	font-size:12px;color:#fff;
+}
+
+
+/*--- Color Group D -------------------------------*/
+.cols15, .cols35, .cols55 {
+	width:40px;background:#fff;text-align:right;
+	border:1px solid #fff;
+	font-size:10px;color:#ff0033;
+}  
+  
+.cols16, .cols36, .cols56 {
+	width:40px;background:#fff;text-align:right;
+	border:1px solid #fff;
+	font-size:10px;color:#ffcc33;
+}  
+
+.cols17, .cols37, .cols57 {
+	width:40px;background:#fff;text-align:right;
+	border:1px solid #fff;
+	font-size:10px;color:#009933;
+}  
+  
+
+/*--- Color Group E -------------------------------*/
+.cols22 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #ff0033;
+	font-size:16px;color:#ff0033;font-weight:bold;
+}
+.cols23 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #ffcc33;
+	font-size:16px;color:#ffcc33;font-weight:bold;
+}
+.cols24 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #009933;
+	font-size:16px;color:#009933;font-weight:bold;
+}  
+
+
+/*--- Color Group F -------------------------------*/
+.cols25, .cols45, .cols65 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #ff0033;
+	color:#000;font-weight:bold;
+}
+.cols26, .cols46, .cols66 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #ffcc33;
+	color:#000;font-weight:bold;
+}
+.cols27, .cols47, .cols67 {
+	width:54px;background:#fff;text-align:right;
+	border:1px solid #009933;
+	color:#000;font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<div id="containerI">
+<!--START--important-->
+<form name="CmC">
+<span style="font-size:18px;font-weight:bold;">漲跌停</span><span style="font-size:10px;">&nbsp;&nbsp;(컴퓨터)</span><br>
+<hr style="width:100%;border-top:1px dashed #000;"/>
+<span style="font-size:12px;">輸入價位</span><input type="text" name="Price" value="" style="width:140px;height:30px;font-size:20px;margin:0px 10px;text-align:center;">
+<input type="button" value="確定" onclick="AnsZ()" style="width:50px;height:30px;margin:0px 2px;">
+<input type="button" value="清除" onclick="Clear()" style="width:50px;height:30px;margin:0px 2px;"><br>
+<hr style="width:100%;border-top:1px dashed #000;"/>
+
+<table style="width:374px;">
+	<tr>
+		<td class="cols12"><output name="PaH00"></output></td>
+		<td class="cols22" ><output name="Hightest">H00</output></td>
+		<td class="cols30" colspan="4"><hr style="width:100%;border-top:1px solid #ff0033;"/></td>   
+	</tr>  
+	<tr>
+		<td class="cols10"><output name="PaH01"></output></td>
+		<td class="cols21"><output name="H01">H01</output></td>
+		<td class="cols35"><output name="PaH05"></output></td>
+		<td class="cols45"><output name="H05">H05</output></td>
+		<td class="cols55"><output name="PaH10"></output></td>
+		<td class="cols65"><output name="H10">H10</output></td>        
+	</tr>    
+	<tr>
+		<td class="cols10"><output name="PaH02"></output></td>
+		<td class="cols21"><output name="H02">H02</output></td>
+		<td class="cols30"><output name="PaH06"></output></td>
+		<td class="cols41"><output name="H06">H06</output></td>
+		<td class="cols50"><output name="PaH11"></output></td>
+		<td class="cols61"><output name="H11">H11</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols10"><output name="PaH03"></output></td>
+		<td class="cols21"><output name="H03">H03</output></td>
+		<td class="cols30"><output name="PaH07"></output></td>
+		<td class="cols41"><output name="H07">H07</output></td>
+		<td class="cols50"><output name="PaH12"></output></td>
+		<td class="cols61"><output name="H12">H12</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols16"><output name="PaH04"></output></td>
+		<td class="cols26"><output name="H04">H04</output></td>
+		<td class="cols30"><output name="PaH08"></output></td>
+		<td class="cols41"><output name="H08">H08</output></td>
+		<td class="cols50"><output name="PaH13"></output></td>
+		<td class="cols61"><output name="H13">H13</output></td>        
+	</tr>    
+	<tr>
+		<td class="cols10"><output name=""></output></td>
+		<td class="cols20"><output name=""></output></td>
+		<td class="cols36"><output name="PaH09"></output></td>
+		<td class="cols46"><output name="H09">H09</output></td>
+		<td class="cols56"><output name="PaH14"></output></td>
+		<td class="cols66"><output name="H14">H14</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols10"><output name=""></output></td>
+		<td class="cols20"><output name=""></output></td>
+		<td class="cols30"><output name=""></output></td>
+		<td class="cols40"><output name=""></output></td>
+		<td class="cols56"><output name="PaH15"></output></td>
+		<td class="cols66"><output name="H15">H15</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols13"><output name="">0%</output></td>
+		<td class="cols23"><output name="PriceView">P00</output></td>
+		<td class="cols30" colspan="4"><hr style="width:100%;border-top:1px solid #ffcc33;"/></td>           
+	</tr>    
+	<tr>
+		<td class="cols10"><output name=""></output></td>
+		<td class="cols20"><output name=""></output></td>
+		<td class="cols30"><output name=""></output></td>
+		<td class="cols40"><output name=""></output></td>
+		<td class="cols56"><output name="PaL10"></output></td>
+		<td class="cols66"><output name="L10">L10</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols10"><output name=""></output></td>
+		<td class="cols20"><output name=""></output></td>
+		<td class="cols36"><output name="PaL05"></output></td>
+		<td class="cols46"><output name="L05">L05</output></td>
+		<td class="cols56"><output name="PaL11"></output></td>
+		<td class="cols66"><output name="L11">L11</output></td>        
+	</tr> 
+	<tr>
+		<td class="cols16"><output name="PaL01"></output></td>
+		<td class="cols26"><output name="L01">L01</output></td>
+		<td class="cols30"><output name="PaL06"></output></td>
+		<td class="cols41"><output name="L06">L06</output></td>
+		<td class="cols50"><output name="PaL12"></output></td>
+		<td class="cols61"><output name="L12">L12</output></td>        
+	</tr>     
+	<tr>
+		<td class="cols10"><output name="PaL02"></output></td>
+		<td class="cols21"><output name="L02">L02</output></td>
+		<td class="cols30"><output name="PaL07"></output></td>
+		<td class="cols41"><output name="L07">L07</output></td>
+		<td class="cols50"><output name="PaL13"></output></td>
+		<td class="cols61"><output name="L13">L13</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols10"><output name="PaL03"></output></td>
+		<td class="cols21"><output name="L03">L03</output></td>
+		<td class="cols30"><output name="PaL08"></output></td>
+		<td class="cols41"><output name="L08">L08</output></td>
+		<td class="cols50"><output name="PaL14"></output></td>
+		<td class="cols61"><output name="L14">L14</output></td>        
+	</tr>  
+	<tr>
+		<td class="cols10"><output name="PaL04"></output></td>
+		<td class="cols21"><output name="L04">L04</output></td>
+		<td class="cols37"><output name="PaL09"></output></td>
+		<td class="cols47"><output name="L09">L09</output></td>
+		<td class="cols57"><output name="PaL15"></output></td>
+		<td class="cols67"><output name="L15">L15</output></td>        
+	</tr>    
+	<tr>
+		<td class="cols14"><output name="PaL00"></output></td>
+		<td class="cols24"><output name="Lowest">L00</output></td>
+		<td class="cols30" colspan="4"><hr style="width:100%;border-top:1px solid #009933;"/></td>       
+	</tr>    
+</table>
+</from>
+<!--important--End-->
+</div>
+
+
+<div id="containerII">
+<span style="font-size:12px;">免責申明, 僅供參考, 自行斟酌 ◆ 2023.08.21 製作◆</span>
+</div>  
+
+<script type="text/javascript">
+function AnsHightest()
+{
+　　p = parseFloat(document.CmC.Price.value);
+　　x = p*1.1;
+　　if(x<10){
+    　　h = Math.floor(x*100)*0.01;
+　　　　document.CmC.Hightest.value = h.toFixed(2);
+　　}
+　　else if(x<50){             
+    　　h = Math.floor(x/0.05)*0.05;
+　　　　document.CmC.Hightest.value = h.toFixed(2);
+　　}
+　　else if(x<100){             
+    　　h = Math.floor(x/0.1)*0.1;
+　　　　document.CmC.Hightest.value = h.toFixed(2);
+　　}
+　　else if(x<500){             
+    　　h = Math.floor(x/0.5)*0.5;
+　　　　document.CmC.Hightest.value = h.toFixed(2);
+　　}                 
+　　else if(x<1000){             
+    　　h = Math.floor(x/1)*1;
+　　　　document.CmC.Hightest.value = h.toFixed(2);
+　　}
+　　else if(x>=1000){             
+    　　h = Math.floor(x/5)*5;
+　　　　document.CmC.Hightest.value = h.toFixed(2);
+　　}
+}
+
+function AnsLowest()
+{
+　　p = parseFloat(document.CmC.Price.value);
+　　y = p*0.9;
+　　if(y>=1000){
+    　　l = Math.ceil(y/5)*5;
+　　　　document.CmC.Lowest.value = l.toFixed(2);
+　　}
+　　else if(y>=500){             
+    　　l = Math.ceil(y/1)*1;
+　　　　document.CmC.Lowest.value = l.toFixed(2);
+　　}
+　　else if(y>=100){             
+    　　l = Math.ceil(y/0.5)*0.5;
+　　　　document.CmC.Lowest.value = l.toFixed(2);
+　　}
+　　else if(y>=50){             
+    　　l = Math.ceil(y/0.1)*0.1;
+　　　　document.CmC.Lowest.value = l.toFixed(2);
+　　}                 
+　　else if(x>=10){             
+    　　l = Math.ceil(y/0.05)*0.05;
+　　　　document.CmC.Lowest.value = l.toFixed(2);
+　　}
+　　else if(y<10){             
+    　　l = Math.ceil(y*100)*0.01;
+　　　　document.CmC.Lowest.value = l.toFixed(2);
+　　}
+}
+
+function AnsPriceView(){
+	p = parseFloat(document.CmC.Price.value);
+	document.CmC.PriceView.value = p;           
+}
+                 
+function AnsH(){
+	p = parseFloat(document.CmC.Price.value);
+	htemp = document.CmC.Hightest.value;
+
+	ghx = (htemp-p)/5;        	  
+	gha = htemp-(ghx*1);
+	document.CmC.H01.value = gha.toFixed(2);
+	ghb = htemp-(ghx*2);
+	document.CmC.H02.value = ghb.toFixed(2);
+	ghc = htemp-(ghx*3);
+	document.CmC.H03.value = ghc.toFixed(2);
+	ghd = htemp-(ghx*4);
+	document.CmC.H04.value = ghd.toFixed(2);               
+
+	ghy = (htemp-p)/6;
+	ghe = htemp-(ghy*1);
+	document.CmC.H05.value = ghe.toFixed(2);                    
+	ghf = htemp-(ghy*2);
+    document.CmC.H06.value = ghf.toFixed(2);
+	ghg = htemp-(ghy*3);
+	document.CmC.H07.value = ghg.toFixed(2);
+	ghh = htemp-(ghy*4);
+	document.CmC.H08.value = ghh.toFixed(2);
+	ghi = htemp-(ghy*5);
+	document.CmC.H09.value = ghi.toFixed(2);
+
+	ghz = (htemp-p)/7;
+	ghj = htemp-(ghz*1);
+    document.CmC.H10.value = ghj.toFixed(2);
+	ghk = htemp-(ghz*2);
+	document.CmC.H11.value = ghk.toFixed(2);
+	ghl = htemp-(ghz*3);
+    document.CmC.H12.value = ghl.toFixed(2); 
+	ghm = htemp-(ghz*4);
+    document.CmC.H13.value = ghm.toFixed(2);
+	ghn = htemp-(ghz*5);
+	document.CmC.H14.value = ghn.toFixed(2);
+	gho = htemp-(ghz*6);
+    document.CmC.H15.value = gho.toFixed(2);                     
+}
+                 
+function AnsL(){
+	p = parseFloat(document.CmC.Price.value);
+	ltemp = document.CmC.Lowest.value;
+
+    glx = (p-ltemp)/5;            	  
+	gla = p-(glx*1);
+	document.CmC.L01.value = gla.toFixed(2);
+	glb = p-(glx*2);
+	document.CmC.L02.value = glb.toFixed(2);
+	glc = p-(glx*3);
+	document.CmC.L03.value = glc.toFixed(2);
+	gld = p-(glx*4);
+	document.CmC.L04.value = gld.toFixed(2);                
+
+	gly = (p-ltemp)/6;
+	gle = p-(gly*1);
+	document.CmC.L05.value = gle.toFixed(2);                 
+	glf = p-(gly*2);
+    document.CmC.L06.value = glf.toFixed(2);
+	glg = p-(gly*3);
+	document.CmC.L07.value = glg.toFixed(2);
+	glh = p-(gly*4);
+	document.CmC.L08.value = glh.toFixed(2);
+	gli = p-(gly*5);
+	document.CmC.L09.value = gli.toFixed(2);              
+
+                 
+	glz = (p-ltemp)/7;
+	glj = p-(glz*1);
+    document.CmC.L10.value = glj.toFixed(2);
+	glk = p-(glz*2);
+	document.CmC.L11.value = glk.toFixed(2);
+	gll = p-(glz*3);
+	document.CmC.L12.value = gll.toFixed(2);
+	glm = p-(glz*4);
+    document.CmC.L13.value = glm.toFixed(2);
+	gln = p-(glz*5);
+	document.CmC.L14.value = gln.toFixed(2);
+	glo = p-(glz*6);
+	document.CmC.L15.value = glo.toFixed(2);
+}
+
+function AnsPaH(){
+	htemp = document.CmC.Hightest.value;
+	p = parseFloat(document.CmC.Price.value);
+
+	gpahx = ((htemp/p)-1)*100;
+	document.CmC.PaH00.value = gpahx.toFixed(2)+"%";
+                 
+	tempha = document.CmC.H01.value;
+	gpaha = ((tempha/p)-1)*100;
+	document.CmC.PaH01.value = gpaha.toFixed(2)+"%";
+	temphb = document.CmC.H02.value;
+	gpahb = ((temphb/p)-1)*100;
+	document.CmC.PaH02.value = gpahb.toFixed(2)+"%";                 
+	temphc = document.CmC.H03.value;
+	gpahc = ((temphc/p)-1)*100;
+	document.CmC.PaH03.value = gpahc.toFixed(2)+"%";                 
+	temphd = document.CmC.H04.value;
+	gpahd = ((temphd/p)-1)*100;
+                
+	document.CmC.PaH04.value = gpahd.toFixed(2)+"%";
+	temphe = document.CmC.H05.value;
+	gpahe = ((temphe/p)-1)*100;
+	document.CmC.PaH05.value = gpahe.toFixed(2)+"%";                 
+	temphf = document.CmC.H06.value;
+	gpahf = ((temphf/p)-1)*100;
+	document.CmC.PaH06.value = gpahf.toFixed(2)+"%";                                   
+	temphg = document.CmC.H07.value;
+	gpahg = ((temphg/p)-1)*100;
+	document.CmC.PaH07.value = gpahg.toFixed(2)+"%";                                     
+	temphh = document.CmC.H08.value;
+	gpahh = ((temphh/p)-1)*100;
+	document.CmC.PaH08.value = gpahh.toFixed(2)+"%";                                     
+	temphi = document.CmC.H09.value;
+	gpahi = ((temphi/p)-1)*100;
+	document.CmC.PaH09.value = gpahi.toFixed(2)+"%";   
+
+	temphj = document.CmC.H10.value;
+	gpahj = ((temphj/p)-1)*100;
+	document.CmC.PaH10.value = gpahj.toFixed(2)+"%";                                     
+	temphk = document.CmC.H11.value;
+	gpahk = ((temphk/p)-1)*100;
+	document.CmC.PaH11.value = gpahk.toFixed(2)+"%";                                     
+	temphl = document.CmC.H12.value;
+	gpahl = ((temphl/p)-1)*100;
+	document.CmC.PaH12.value = gpahl.toFixed(2)+"%";
+	temphm = document.CmC.H13.value;
+	gpahm = ((temphm/p)-1)*100;
+	document.CmC.PaH13.value = gpahm.toFixed(2)+"%";                 
+	temphn = document.CmC.H14.value;
+	gpahn = ((temphn/p)-1)*100;
+	document.CmC.PaH14.value = gpahn.toFixed(2)+"%";
+	tempho = document.CmC.H15.value;
+	gpaho = ((tempho/p)-1)*100;
+	document.CmC.PaH15.value = gpaho.toFixed(2)+"%";                                                  
+}
+
+function AnsPaL(){               
+	ltemp = document.CmC.Lowest.value;
+	p = parseFloat(document.CmC.Price.value);                  
+
+	gpaly = ((ltemp/p)-1)*100;
+	document.CmC.PaL00.value = gpaly.toFixed(2)+"%";
+
+	templa = document.CmC.L01.value;
+	gpala = ((templa/p)-1)*100;
+	document.CmC.PaL01.value = gpala.toFixed(2)+"%";                 
+	templb = document.CmC.L02.value;
+	gpalb = ((templb/p)-1)*100;
+	document.CmC.PaL02.value = gpalb.toFixed(2)+"%";                 
+	templc = document.CmC.L03.value;
+	gpalc = ((templc/p)-1)*100;
+	document.CmC.PaL03.value = gpalc.toFixed(2)+"%";                 
+	templd = document.CmC.L04.value;
+	gpald = ((templd/p)-1)*100;
+	document.CmC.PaL04.value = gpald.toFixed(2)+"%";   
+                 
+	temple = document.CmC.L05.value;
+	gpale = ((temple/p)-1)*100;
+	document.CmC.PaL05.value = gpale.toFixed(2)+"%";                  
+	templf = document.CmC.L06.value;
+	gpalf = ((templf/p)-1)*100;
+	document.CmC.PaL06.value = gpalf.toFixed(2)+"%";                  
+	templg = document.CmC.L07.value;
+	gpalg = ((templg/p)-1)*100;
+	document.CmC.PaL07.value = gpalg.toFixed(2)+"%";                   
+	templh = document.CmC.L08.value;
+	gpalh = ((templh/p)-1)*100;
+	document.CmC.PaL08.value = gpalh.toFixed(2)+"%";                   
+	templi = document.CmC.L09.value;
+	gpali = ((templi/p)-1)*100;
+	document.CmC.PaL09.value = gpali.toFixed(2)+"%";                   
+                 
+	templj = document.CmC.L10.value;
+	gpalj = ((templj/p)-1)*100;
+	document.CmC.PaL10.value = gpalj.toFixed(2)+"%";   
+                 
+	templk = document.CmC.L11.value;
+	gpalk = ((templk/p)-1)*100;
+	document.CmC.PaL11.value = gpalk.toFixed(2)+"%";                    
+	templl = document.CmC.L12.value;
+	gpall = ((templl/p)-1)*100;
+	document.CmC.PaL12.value = gpall.toFixed(2)+"%";                  
+	templm = document.CmC.L13.value;
+	gpalm = ((templm/p)-1)*100;
+	document.CmC.PaL13.value = gpalm.toFixed(2)+"%";                    
+	templn = document.CmC.L14.value;
+	gpaln = ((templn/p)-1)*100;
+	document.CmC.PaL14.value = gpaln.toFixed(2)+"%";                    
+	templo = document.CmC.L15.value;
+	gpalo = ((templo/p)-1)*100;
+	document.CmC.PaL15.value = gpalo.toFixed(2)+"%";                    
+}                 
+                 
+function AnsZ(){
+	document.CmC.Hightest.value.innerHTML = AnsHightest();
+	document.CmC.Lowest.value.innerHTML = AnsLowest();
+	document.CmC.H01.value.innerHTML = AnsH();
+	document.CmC.H02.value.innerHTML = AnsH();
+	document.CmC.H03.value.innerHTML = AnsH();  
+	document.CmC.H04.value.innerHTML = AnsH();
+	document.CmC.H05.value.innerHTML = AnsH();
+	document.CmC.H06.value.innerHTML = AnsH();  
+	document.CmC.H07.value.innerHTML = AnsH();
+	document.CmC.H08.value.innerHTML = AnsH();
+	document.CmC.H09.value.innerHTML = AnsH();
+	document.CmC.H10.value.innerHTML = AnsH();
+	document.CmC.H11.value.innerHTML = AnsH();
+	document.CmC.H12.value.innerHTML = AnsH();
+	document.CmC.H13.value.innerHTML = AnsH();
+	document.CmC.H14.value.innerHTML = AnsH();
+	document.CmC.H15.value.innerHTML = AnsH();                 
+	document.CmC.PaH00.value.innerHTML = AnsPaH();
+	document.CmC.PaH01.value.innerHTML = AnsPaH(); 
+	document.CmC.PaH02.value.innerHTML = AnsPaH();                  
+	document.CmC.PaH03.value.innerHTML = AnsPaH();                  
+	document.CmC.PaH04.value.innerHTML = AnsPaH(); 
+	document.CmC.PaH05.value.innerHTML = AnsPaH();
+	document.CmC.PaH06.value.innerHTML = AnsPaH();                  
+	document.CmC.PaH07.value.innerHTML = AnsPaH(); 
+	document.CmC.PaH08.value.innerHTML = AnsPaH();
+	document.CmC.PaH09.value.innerHTML = AnsPaH();                  
+	document.CmC.PaH10.value.innerHTML = AnsPaH(); 
+	document.CmC.PaH11.value.innerHTML = AnsPaH();
+	document.CmC.PaH12.value.innerHTML = AnsPaH();
+	document.CmC.PaH13.value.innerHTML = AnsPaH(); 
+	document.CmC.PaH14.value.innerHTML = AnsPaH();
+	document.CmC.PaH15.value.innerHTML = AnsPaH();                 
+	document.CmC.PriceView.value.innerHTML = AnsPriceView();
+	document.CmC.L01.value.innerHTML = AnsL();
+	document.CmC.L02.value.innerHTML = AnsL();
+	document.CmC.L03.value.innerHTML = AnsL();
+	document.CmC.L04.value.innerHTML = AnsL();
+	document.CmC.L05.value.innerHTML = AnsL();
+	document.CmC.L06.value.innerHTML = AnsL();
+	document.CmC.L07.value.innerHTML = AnsL();
+	document.CmC.L08.value.innerHTML = AnsL();
+	document.CmC.L09.value.innerHTML = AnsL();
+	document.CmC.L10.value.innerHTML = AnsL();
+	document.CmC.L11.value.innerHTML = AnsL();
+	document.CmC.L12.value.innerHTML = AnsL();
+	document.CmC.L13.value.innerHTML = AnsL();
+	document.CmC.L14.value.innerHTML = AnsL();
+	document.CmC.L15.value.innerHTML = AnsL();                 
+	document.CmC.PaL00.value.innerHTML = AnsPaL();
+	document.CmC.PaL01.value.innerHTML = AnsPaL();
+	document.CmC.PaL02.value.innerHTML = AnsPaL();
+ 	document.CmC.PaL03.value.innerHTML = AnsPaL();
+	document.CmC.PaL04.value.innerHTML = AnsPaL();
+	document.CmC.PaL05.value.innerHTML = AnsPaL();
+ 	document.CmC.PaL06.value.innerHTML = AnsPaL();                   
+	document.CmC.PaL07.value.innerHTML = AnsPaL();
+	document.CmC.PaL08.value.innerHTML = AnsPaL();
+ 	document.CmC.PaL09.value.innerHTML = AnsPaL();                   
+	document.CmC.PaL10.value.innerHTML = AnsPaL();
+	document.CmC.PaL11.value.innerHTML = AnsPaL();
+ 	document.CmC.PaL12.value.innerHTML = AnsPaL();                   
+	document.CmC.PaL13.value.innerHTML = AnsPaL();
+	document.CmC.PaL14.value.innerHTML = AnsPaL();
+ 	document.CmC.PaL15.value.innerHTML = AnsPaL();                                  
+}
+
+function Clear(){
+	document.CmC.Price.value="";
+	document.CmC.Hightest.value="";
+	document.CmC.Lowest.value="";
+	document.CmC.H01.value="";
+	document.CmC.H02.value="";
+	document.CmC.H03.value="";
+	document.CmC.H04.value="";
+	document.CmC.H05.value="";
+	document.CmC.H06.value="";
+	document.CmC.H07.value="";
+	document.CmC.H08.value="";
+	document.CmC.H09.value="";
+	document.CmC.H10.value="";
+	document.CmC.H11.value="";
+	document.CmC.H12.value="";
+	document.CmC.H13.value="";
+	document.CmC.H14.value="";
+	document.CmC.H15.value="";                   
+	document.CmC.PaH00.value="";
+	document.CmC.PaH01.value="";
+	document.CmC.PaH02.value="";
+	document.CmC.PaH03.value="";
+	document.CmC.PaH04.value="";                
+	document.CmC.PaH05.value="";
+	document.CmC.PaH06.value="";
+	document.CmC.PaH07.value="";
+	document.CmC.PaH08.value="";                   
+	document.CmC.PaH09.value="";
+	document.CmC.PaH10.value="";
+	document.CmC.PaH11.value="";
+	document.CmC.PaH12.value="";
+	document.CmC.PaH13.value="";
+	document.CmC.PaH14.value="";
+	document.CmC.PaH15.value="";                  
+	document.CmC.PriceView.value="";
+	document.CmC.L01.value="";
+	document.CmC.L02.value="";
+	document.CmC.L03.value="";
+	document.CmC.L04.value="";
+	document.CmC.L05.value="";
+	document.CmC.L06.value="";
+	document.CmC.L07.value="";
+	document.CmC.L08.value="";
+	document.CmC.L09.value="";
+	document.CmC.L10.value="";
+	document.CmC.L11.value="";
+	document.CmC.L12.value="";
+	document.CmC.L13.value="";
+	document.CmC.L14.value="";
+	document.CmC.L15.value="";                 
+	document.CmC.PaL00.value="";  
+	document.CmC.PaL01.value="";                    
+	document.CmC.PaL02.value="";                  
+	document.CmC.PaL03.value="";                  
+	document.CmC.PaL04.value="";                    
+	document.CmC.PaL05.value="";                  
+	document.CmC.PaL06.value="";                     
+	document.CmC.PaL07.value="";                    
+	document.CmC.PaL08.value="";                  
+	document.CmC.PaL09.value="";                     
+	document.CmC.PaL10.value="";                    
+	document.CmC.PaL11.value="";                  
+	document.CmC.PaL12.value="";                     
+	document.CmC.PaL13.value="";                    
+	document.CmC.PaL14.value="";                  
+	document.CmC.PaL15.value="";                     
+}
+</Script>
+          
+  </body>
+</html>
