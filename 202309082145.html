@@ -1,0 +1,462 @@
+<!Doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>202309082145</title>
+
+<style type="text/css">
+/*----------------------------------------------------------------------
+Created Date : 2023.09.01 03:12
+Title        : 컴퓨터 (Beta)
+Author       : 
+Remark       :
+----------------------------------------------------------------------*/
+body {
+	height:0 auto!important;
+	background:#a6a6a6;
+	margin:3px 0px;
+} 
+
+#wrapper {
+	margin:0 auto!important;;
+	width:382px;
+	padding:3px;border:1px solid #494949;
+	background:#fff;
+}
+
+header {
+	width:374px;margin-bottom:3px;border-radius:10px;
+	text-align:center;padding:3px;border:1px solid #fff;
+	background:#fff;font-size:18px;font-weight:bold;
+	text-shadow:2px 3px 3px rgba(0,0,0,0.2);
+}
+  
+table, th, td {  
+	border:none;border-collapse:collapse;     
+}
+ 
+  
+  
+#container {
+	width:244px;height:260px;border:1px solid #494949;font-size:40px;
+	background:#494949;margin:3px 0px;text-align:center;padding:30px 0px;color:#f5da53;
+}  
+  
+  
+  
+.oGrid_bo_1, .oGrid_so_1, .oGrid_ao_1 {width:244px;text-align:right;padding-right:40px!important;font-size:16px;font-weight:bold;}  
+  
+  
+  
+#containerI {
+	display:none;
+	width:244px;height:0 auto;border:1px solid #494949;
+	background:#fff;margin:3px 0px;
+}
+
+#oTBI {
+	width:244px;height:0 auto;border:1px solid #000;color:#000;font-size:14px;
+}
+
+#oTBI td {
+	border:1px solid #494949;padding:3px 6px;
+} 
+
+.oGrid_boa_1 {width:100px;}
+  
+.oGrid_boa_2, .oGrid_bob_2, .oGrid_boc_2, .oGrid_bod_2, .oGrid_boe_2 {text-align:right;padding-right:10px!important;}
+
+  
+  
+#containerII {
+	display:none;
+	width:244px;height:0 auto;border:1px solid #494949;
+	background:#fff;margin:3px 0px;
+}    
+
+#oTBII {
+	height:0 auto;border:1px solid #000;color:#000;font-size:14px;
+}
+
+#oTBII td {
+	border:1px solid #494949;padding:3px 6px;
+} 
+  
+.oGrid_soa_1 {width:100px;}  
+  
+.oGrid_soa_2, .oGrid_sob_2, .oGrid_soc_2, .oGrid_sod_2, .oGrid_soe_2, .oGrid_sof_2 {text-align:right;padding-right:10px!important;}  
+
+
+  
+#containerIII {
+	display:none;
+	width:244px;height:0 auto;border:1px solid #494949;
+	background:#fff;margin:3px 0px;
+}  
+  
+#oTBIII {
+	height:0 auto;border:1px solid #000;color:#000;font-size:14px;
+}
+
+#oTBIII td {
+	border:1px solid #494949;padding:3px 6px;
+}
+  
+.oGrid_aoa_1 {width:100px;} 
+  
+.oGrid_aoa_2 {text-align:right;padding-right:32px!important;}
+  
+.oGrid_aob_2 {text-align:right;padding-right:30px!important;}
+  
+  
+aside {
+	float:right!important;margin-top:0px!important;margin-bottom:3px!important;
+	width:132px;height:0 auto;
+	text-align:center;padding:0px;
+	background:#fff;
+}
+
+#iTB-aside {
+	width:132px;height:0 auto;
+	color:#000;font-size:16px;
+}
+
+#iTB-aside th, #iTB-aside td {
+	padding:3px 0px;
+}
+
+  
+  
+footer {
+	clear:both!important;
+	width:366px;height:24px;text-align:center;padding:3px;padding-right:12px;
+	border:1px solid #494949;background:#494949;color:#fff;
+}  
+  
+  
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <header>컴퓨터<span style="font-size:10px;text-shadow: 2px 3px 3px rgba(0,0,0,0.2);">&nbsp;&nbsp;(Beta)</span></header>   
+       
+<!--START--important-->
+<form name="CmC">   
+<aside>
+  <table id="iTB-aside">
+	<tr>
+      <td class="iGrid1" colspan="7" style="background:#b90337;padding-top:6px;border-left:2px solid #b90337;border-right:2px solid #b90337;"></td>
+    </tr>    
+	<tr>
+      <td class="iGrid2" colspan="7" style="color:#b90337;font-weight:bold;border-left:2px solid #b90337;border-right:2px solid #b90337;">買進</td>
+    </tr>  
+	<tr>
+      <td class="iGrid3" colspan="7" style="text-align:left;padding-left:10px;border-left:2px solid #b90337;border-right:2px solid #b90337;">
+						<input type="text" id="BP" placeholder="買進股價"
+                               style="width:90px;height:30px;font-size:20px;margin-bottom:3px;color:#000;text-align:center;">
+                        <output name="bpmsg" style="font-size:10px;color:#000;"></output></td>
+    </tr>    
+	<tr>
+      <td class="iGrid4" colspan="7" style="text-align:left;padding-left:10px;border-left:2px solid #b90337;border-right:2px solid #b90337;">
+						<input type="text" id="BQ" placeholder="買進張數"
+                               style="width:90px;height:30px;font-size:20px;margin-bottom:3px;color:#000;text-align:center;">
+                        <output name="bqmsg" style="font-size:10px;color:#000;"></output></td>
+    </tr>    
+	<tr>
+      <td class="iGrid5" colspan="7" style="border:2px solid #b90337;border-top:none;"></td>
+    </tr>     
+	<tr>
+      <td class="iGrid6" colspan="7" ></td>
+    </tr>        
+	<tr>
+      <td class="iGrid7" colspan="7" style="background:#09874a;padding-top:6px;border-left:2px solid #09874a;border-right:2px solid #09874a;"></td>
+    </tr>    
+	<tr>
+      <td class="iGrid8" colspan="7" style="color:#09874a;font-weight:bold;border-left:2px solid #09874a;border-right:2px solid #09874a;">賣出</td>
+    </tr>      
+	<tr>
+      <td class="iGrid9" colspan="7" style="text-align:left;padding-left:10px;border-left:2px solid #09874a;border-right:2px solid #09874a;">
+						<input type="text" id="SP" placeholder="賣出股價"
+                               style="width:90px;height:30px;font-size:20px;margin-bottom:3px;color:#000;text-align:center;">
+                        <output name="spmsg" style="font-size:10px;color:#000;"></output></td>
+    </tr>    
+	<tr>
+      <td class="iGrid10" colspan="7" style="text-align:left;padding-left:10px;border-left:2px solid #09874a;border-right:2px solid #09874a;">
+						<input type="text" id="SQ" placeholder="賣出張數"
+                               style="width:90px;height:30px;font-size:20px;margin-bottom:3px;color:#000;text-align:center;">
+                        <output name="sqmsg" style="font-size:10px;color:#000;"></output></td>
+    </tr> 
+	<tr>
+      <td class="iGrid11" colspan="7" style="border:2px solid #09874a;border-top:none;"></td>
+    </tr>  
+	<tr>
+      <td class="iGrid12" colspan="7" ></td>
+    </tr>        
+	<tr>
+      <td class="iGrid13" colspan="7" style="background:#fff;"><button type="button" class="" onclick="Check()" style="width:60px;padding:5px;">計算</button>
+        													   <button type="button" class="" onclick="Clear()" style="width:60px;padding:5px;cursor:pointer;">清除
+                                                               		<span style="font-size:10px;">⟳</span>
+        													   </button></td>
+    </tr>          
+  </table>  
+</aside>
+
+      
+  
+<div id="container">
+  工 必<br>欲 先<br>善 利<br>其 其<br>事 器<br>
+</div>  
+  
+  
+  
+<div id="containerI">
+	<table id="oTBI">
+	  <tr>
+        <td class="oGrid_bo_1" colspan="2" style="background:#b90337;color:#fff;">買進 ㋡</td>    
+      </tr>
+	  <tr>
+        <td class="oGrid_boa_1">▪股價</td>
+        <td class="oGrid_boa_2"><output name="boa"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_bob_1">▪張數</td>
+        <td class="oGrid_bob_2"><output name="bob"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_boc_1">▪股票金額</td>
+        <td class="oGrid_boc_2"><output name="boc"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_bod_1">▪手續費</td>
+        <td class="oGrid_bod_2"><output name="bod"></output></td>        
+      </tr>   
+	  <tr>
+        <td class="oGrid_boe_1" style="font-weight:bold;color:#b90337;">▪買進金額</td>
+        <td class="oGrid_boe_2"><output name="boe"></output></td>        
+      </tr>   
+	</table>   
+</div> <!--containerI-->  
+
+  
+  
+<div id="containerII">
+	<table id="oTBII">
+	  <tr>
+        <td class="oGrid_so_1" colspan="2" style="background:#09874a;color:#fff;">賣出 ㋡</td>    
+      </tr>
+	  <tr>
+        <td class="oGrid_soa_1">▪股價</td>
+        <td class="oGrid_soa_2"><output name="soa"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_sob_1">▪張數</td>
+        <td class="oGrid_sob_2"><output name="sob"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_soc_1">▪股票金額</td>
+        <td class="oGrid_soc_2"><output name="soc"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_sod_1">▪手續費</td>
+        <td class="oGrid_sod_2"><output name="sod"></output></td>        
+      </tr>   
+	  <tr>
+        <td class="oGrid_sof_1">▪證交稅</td>
+        <td class="oGrid_sof_2"><output name="sof"></output></td>        
+      </tr>      
+	  <tr>
+        <td class="oGrid_soe_1" style="font-weight:bold;color:#09874a;">▪賣出金額</td>
+        <td class="oGrid_soe_2"><output name="soe"></output></td>        
+      </tr>      
+	</table>
+</div> <!--containerII-->
+
+
+
+<div id="containerIII">
+	<table id="oTBIII">
+	  <tr>
+        <td class="oGrid_ao_1" colspan="2" style="background:#f5da53;color:#000;">獲利 ㋡</td>    
+      </tr>
+	  <tr>
+        <td class="oGrid_aoa_1">▪報酬率</td>
+        <td class="oGrid_aoa_2"><output name="aoa"></output></td>        
+      </tr>
+	  <tr>
+        <td class="oGrid_aob_1" style="font-weight:bold;color:#f5da53;">▪獲利金額</td>
+        <td class="oGrid_aob_2"><output name="aob"></output></td>        
+      </tr>
+	</table>
+</div> <!--containerIII-->  
+  
+</form> 
+<!--important--End--> 
+
+ 
+     
+<footer>
+<span style="font-size:12px;">本 站 試 算 僅 供 參 考&nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;2023.09.08&nbsp;&nbsp;&nbsp;◆&nbsp;&nbsp;&nbsp;DESIGNED BY CARYA</span>
+</footer>   <!--footer-->
+
+<script type="text/javascript">
+function Check() {
+	tdi = document.getElementById("container");
+	tda = document.getElementById("containerI");
+	tdb = document.getElementById("containerII");
+	tdc = document.getElementById("containerIII");  
+
+	ta = parseFloat(document.getElementById("BP").value);
+	tb = parseFloat(document.getElementById("BQ").value);
+	tc = parseFloat(document.getElementById("SP").value);
+	td = parseFloat(document.getElementById("SQ").value);   
+  
+	if (isNaN(ta) || isNaN(tb) || isNaN(tc) || isNaN(td)) {
+		document.CmC.bpmsg.value = "";
+		document.CmC.bqmsg.value = "";
+		document.CmC.spmsg.value = "";
+		document.CmC.sqmsg.value = "";  
+
+		if (isNaN(ta)){
+			document.CmC.bpmsg.value = "✖";
+  		}   
+		if (isNaN(tb)){
+			document.CmC.bqmsg.value = "✖";
+  		} 
+		if (isNaN(tc)){
+			document.CmC.spmsg.value = "✖";
+  		}  
+		if (isNaN(td)){
+			document.CmC.sqmsg.value = "✖";
+  		}  
+     
+	} else {  
+			document.CmC.bpmsg.value = "";
+			document.CmC.bqmsg.value = "";
+			document.CmC.spmsg.value = "";
+			document.CmC.sqmsg.value = "";  
+
+			document.CmC.boa.value = ta; 
+  
+			document.CmC.bob.value = tb; 
+  
+			tboc = ta * 1000 * tb;
+            document.CmC.boc.value = Math.round(tboc);
+
+			tbod = ta * 1000 * tb * 0.001425 * 0.6;
+            document.CmC.bod.value = Math.floor(tbod);
+
+			if (ta === 0 || tb === 0) {
+            	document.CmC.boa.value = "";
+            	document.CmC.bob.value = "";   
+            	document.CmC.boc.value = "";
+            	document.CmC.bod.value = "";   
+            	document.CmC.boe.value = "";    
+  
+			  if (ta === 0 ) {  
+				document.CmC.bpmsg.value = "✖";  
+			  }
+			  if (tb === 0 ) {  
+				document.CmC.bqmsg.value = "✖";  
+			  }   
+  
+            } else if (tbod<=20) {                                 
+            	document.CmC.bod.value = "20";
+				tboe = Math.round(tboc) + 20;
+            	document.CmC.boe.value = "$" + tboe;                                  
+			} else {                                
+            	document.CmC.bod.value = Math.floor(tbod);
+                tboe = Math.round(tboc) + Math.floor(tbod);
+            	document.CmC.boe.value = "$" + tboe;                         
+			}
+                         
+			document.CmC.soa.value = tc; 
+  
+			document.CmC.sob.value = td; 
+  
+			tsoc = tc * 1000 * td;
+            document.CmC.soc.value = Math.round(tsoc);
+
+			tsod = tc * 1000 * td * 0.001425 * 0.6;
+            document.CmC.sod.value = Math.floor(tsod);
+                         
+			tsof = tc * 1000 * td * 0.003;
+            document.CmC.sof.value = Math.floor(tsof);                         
+                                                                
+			if (tc === 0 || td === 0) {
+            	document.CmC.soa.value = "";
+            	document.CmC.sob.value = "";   
+            	document.CmC.soc.value = "";
+            	document.CmC.sod.value = "";   
+            	document.CmC.soe.value = ""; 
+            	document.CmC.sof.value = "";    
+                                                       
+            } else if (tsod<=20) { 
+            	document.CmC.sod.value = "20";
+				tsoe = Math.round(tsoc) + 20 + Math.floor(tsof);
+            	document.CmC.soe.value = "$" + tsoe;                         
+			} else { 
+            	document.CmC.sod.value = Math.floor(tsod);
+                tsoe = Math.round(tsoc) - Math.floor(tsod) - Math.floor(tsof);
+            	document.CmC.soe.value = "$" + tsoe;                         
+			}
+
+			if (ta === 0 || tb === 0 || tc === 0 || td === 0) {
+           		document.CmC.aoa.value = "";  
+           		document.CmC.aob.value = "";    
+			} else if (ta === 0 || tb === 0) {
+           		document.CmC.aoa.value = "";  
+           		document.CmC.aob.value = "";      
+			} else if (tc === 0 || td === 0) {
+           		document.CmC.aoa.value = "";  
+           		document.CmC.aob.value = "";      
+			} else {
+				tdi.style.display = "none";                                
+				tda.style.display = "block";
+				tdb.style.display = "block";   
+				tdc.style.display = "block";  
+				taoa = (tsoe - tboe) / tboe * 100;
+           		document.CmC.aoa.value = Math.floor(taoa) + "%"; 
+				taob = tsoe - tboe;
+            	document.CmC.aob.value = taob + "元"; 
+			}
+	}
+}
+
+function Clear() {
+	tdi.style.display = "block";                                
+	tda.style.display = "none"; 
+	tdb.style.display = "none"; 
+	tdc.style.display = "none";   
+	document.getElementById("BP").value = "";
+	document.getElementById("BQ").value = "";
+	document.getElementById("SP").value = "";
+	document.getElementById("SQ").value = "";
+	document.CmC.bpmsg.value = "";
+	document.CmC.bqmsg.value = "";
+	document.CmC.spmsg.value = "";
+	document.CmC.sqmsg.value = "";   
+	document.CmC.boa.value = "";  
+	document.CmC.bob.value = "";  
+	document.CmC.boc.value = "";  
+	document.CmC.bod.value = "";  
+	document.CmC.boe.value = "";  
+	document.CmC.soa.value = ""; 
+	document.CmC.sob.value = "";  
+	document.CmC.soc.value = ""; 
+	document.CmC.sod.value = "";   
+	document.CmC.soe.value = ""; 
+	document.CmC.sof.value = "";   
+	document.CmC.aoa.value = ""; 
+	document.CmC.aob.value = "";     
+}
+  
+  
+  
+  
+
+</Script>
+
+    </div>
+  </body>
+</html>
